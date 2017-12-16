@@ -1,12 +1,12 @@
 import java.text.SimpleDateFormat
 
 buildscript {
-  repositories {
-    jcenter()
-  }
-  dependencies {
-    classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:3.0.0'
-  }
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'biz.aQute.bnd:biz.aQute.bnd.gradle:3.0.0'
+    }
 }
 	
 // Medusa main build file
@@ -57,6 +57,11 @@ jar {
 
 repositories {
     jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.github.jitpack:gradle-simple:1.0'
 }
 
 // create one jar for the javadoc
